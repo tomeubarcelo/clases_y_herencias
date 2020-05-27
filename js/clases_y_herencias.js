@@ -48,11 +48,12 @@ class championsLeagueWinners extends footballTeam {
 //2a herencia
 class europaLeagueWinners extends footballTeam {
     constructor(nameTeam, coach, fundation, stadium, campeonatosEuropaLeague, ultimoTitulo) {
-            super(nameTeam, coach, fundation, stadium);
-            this.campeonatosEuropaLeague = campeonatosEuropaLeague;
-            this.ultimoTitulo = ultimoTitulo;
-        }
-        //metodos
+        super(nameTeam, coach, fundation, stadium);
+        this.campeonatosEuropaLeague = campeonatosEuropaLeague;
+        this.ultimoTitulo = ultimoTitulo;
+    }
+
+    //metodos
     detallesEuropaLeague() {
         console.log("El equipo de fútbol " + this.nameTeam + " se fundó en " + this.fundation + ". Su estadio es " + this.stadium +
             " y su actual entrenador es " + this.coach + ". Tiene " + this.campeonatosEuropaLeague + " campeonatos de la Europa League.");
