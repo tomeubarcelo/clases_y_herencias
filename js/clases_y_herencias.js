@@ -23,15 +23,36 @@ class footballTeam {
 
 //1a herencia
 class championsLeagueWinners extends footballTeam {
-    constructor(nameTeam, coach, fundation, stadium, campeonatosChampions) {
+    constructor(nameTeam, coach, fundation, stadium, campeonatosChampions, pichichiChampions) {
         super(nameTeam, coach, fundation, stadium);
         this.campeonatosChampions = campeonatosChampions;
+        this.pichichiChampions = pichichiChampions;
+    }
+
+    //metodos
+    detallesChampions() {
+        console.log("El equipo de fútbol " + this.nameTeam + " se fundó en " + this.fundation + ". Su estadio es " + this.stadium +
+            " y su actual entrenador es " + this.coach + ". Tiene " + this.campeonatosChampions + " campeonatos de la Champions League.");
+    }
+
+    detallesGoleadorChampions() {
+        if (this.nameTeam == "Real Madrid") {
+            this.pichichiChampions = "Cristiano Ronaldo";
+        } else {
+            this.pichichiChampions = "Leo Messi";
+        }
+        console.log(this.pichichiChampions + " es el máximo goleador en la historia del " + this.nameTeam + " en la Champions League");
     }
 }
 
-//Instancia de footballTeam
+//Instancias
 var rcdMallorca = new footballTeam("RCD Mallorca", "Vicente Moreno", 1916, "Son Moix");
 rcdMallorca.detalles();
 
 var fcBarcelona = new championsLeagueWinners("FC Barcelona", "Quique Setién", 1899, "Camp Nou", 5);
-fcBarcelona.detalles();
+fcBarcelona.detallesChampions();
+fcBarcelona.detallesGoleadorChampions();
+
+var realMadrid = new championsLeagueWinners("Real Madrid", "Zidane", 1902, "Santiago Bernabeu", 13);
+realMadrid.detallesChampions();
+realMadrid.detallesGoleadorChampions();
